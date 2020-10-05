@@ -38,11 +38,11 @@
     <div class="col-2 border border-dark">
       9am
     </div>
-    <div class="col-7 border border-dark" id= "row-1" value= "9">
+    <div class="col-7 border border-dark block" value= "9">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
       <!-- Row 2- 10am -->
@@ -50,11 +50,11 @@
     <div class="col-2 border border-dark">
       10am
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "10">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
       <!-- Row 3- 11am -->
@@ -62,11 +62,11 @@
     <div class="col-2 border border-dark">
       11am
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "11">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
       <!-- Row 4- 12pm -->
@@ -74,11 +74,11 @@
     <div class="col-2 border border-dark">
       12pm
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "12">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
       <!-- Row 5- 1pm -->
@@ -86,11 +86,11 @@
     <div class="col-2 border border-dark">
       1pm
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "13">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
       <!-- Row 6- 2pm -->
@@ -98,11 +98,11 @@
     <div class="col-2 border border-dark">
       2pm
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "14">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
   <!-- Row 7- 3pm -->
@@ -110,11 +110,11 @@
     <div class="col-2 border border-dark">
       3pm
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "15">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
   <!-- Row 8- 4pm -->
@@ -122,11 +122,11 @@
     <div class="col-2 border border-dark">
       4pm
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "16">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
   <!-- Row 9- 5pm -->
@@ -134,31 +134,37 @@
     <div class="col-2 border border-dark">
       5pm
     </div>
-    <div class="col-7 border border-dark">
+    <div class="col-7 border border-dark block" value= "17">
       <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
-      <!-- Save Button -->
+      <button class= saveBtn></button>
     </div>
   </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src= "lib/moment/moment.min.js"></script>
   <script>
 
 var hour = moment().hour()
-var row1 = $('#row-1').value
+var bigDiv = $('.container')
+var currentDay = moment().format("dddd, MMMM Do YYYY")
 
-console.log (row1)
+$('#currentDay').text(currentDay);
 
-console.log(hour)
 
 function setColor(){
-  if( "row-1".value){
-  console.log("works")
-} else { console.log("doesn't")}
+  if( $('.block').attr('value') < hour){
+    $('.block').css('background-color','grey');
+}
+if( $('.block').attr('value') = hour){
+    $('.block').css('background-color','yellow');
+}
+if( $('.block').attr('value') > hour){
+    $('.block').css('background-color','green');
+}
+
 }
 setColor()
 
