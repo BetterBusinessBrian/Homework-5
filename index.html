@@ -38,8 +38,8 @@
     <div class="col-2 border border-dark">
       9am
     </div>
-    <div class="col-7 border border-dark">
-      <!-- Form -->
+    <div class="col-7 border border-dark" id= "row-1" value= "9">
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -51,7 +51,7 @@
       10am
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -63,7 +63,7 @@
       11am
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -75,7 +75,7 @@
       12pm
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -87,7 +87,7 @@
       1pm
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -99,7 +99,7 @@
       2pm
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -111,7 +111,7 @@
       3pm
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -123,7 +123,7 @@
       4pm
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -135,7 +135,7 @@
       5pm
     </div>
     <div class="col-7 border border-dark">
-      <!-- Form -->
+      <textarea class= "border-0" style= "width: 90%;"></textarea>
     </div>
     <div class="col-1 border border-dark">
       <!-- Save Button -->
@@ -145,6 +145,28 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src= "lib/moment/moment.min.js"></script>
+  <script>
+
+var hour = moment().hour()
+var row1 = $('#row-1').value
+
+console.log (row1)
+
+console.log(hour)
+
+function setColor(){
+  if( "row-1".value){
+  console.log("works")
+} else { console.log("doesn't")}
+}
+setColor()
+
+
+    // Function on click to save item to local storage and display it in respective text area
+
+
+  </script>
 </body>
 
 </html>
